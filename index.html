@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Personal Profile that showcases my skills in its design and features">
+    <meta name="author" content="Zanele Mahlangu">
+    <title>Zanele Mahlangu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+    <link rel="manifest" href="media/site.webmanifest">
+    <link rel="stylesheet" href="CSS/chatbot.css">
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/7c845e7167.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="module" src="firebase.js"></script>
+    <script src="main.js"></script>
+    <script src="chatbot.js" defer></script>
+
+
+
+    <button class="chatbot-toggler">
+      <span class="material-symbols-rounded">Chat</span>
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="chatbot">
+      <header>
+        <h2>Zaza Ai</h2>
+        <span class="close-btn material-symbols-outlined">close</span>
+      </header>
+      <ul class="chatbox">
+        <li class="chat incoming">
+          <span class="material-symbols-outlined">KH</span>
+          <p>Hi there 👋<br>Im Zaza AI, an AI assistant designed to answer questions about Zaza, ask me anything?</p>
+        </li>
+      </ul>
+      <div class="chat-input">
+        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+        <span id="send-btn" class="material-symbols-rounded">send</span>
+      </div>
+    </div>
+
+    <div class="loading-screen">
+        <video autoplay muted id="loading-video">
+            <source src="media/loading1.webm" type="video/webm">
+        </video>
+        <button type="button" class="skip-intro">SKIP INTRO
+        </button>
+    </div >
+
+    <div class="main-content">
+
+        <header class="my-title">
+        <div class="title-photo" style="align-items: last baseline;">
+                <img src="media/potrait.png" alt="self potrait" class="my-potrait">
+            <h1 class="name">Zanele Mahlangu<p class="position">Software Engineer</p><div class="social-icons" >
+                <a href="https://www.linkedin.com/in/zanele-mahlangu-652a3b175/" target="_blank"><i class="fab fa-linkedin" style="color:#bbb2cf"></i></a>
+                <a href="https://github.com/mahlanguzanele" target="_blank"><i class="fab fa-github" style="color:#bbb2cf"></i></a>
+                <a href="#contactForm" target="_self"><i class="fa-solid fa-envelope" style="color:#bbb2cf"></i></a>
+                <a href="/Zanele Mahlangu- Software Engineer.pdf" target="_blank"><span class="cv"  style="color:#bbb2cf; border-radius: 10%; background-color: #273747;">CV</span></a>
+            </div></h1>
+        </div>
+            <div class="menu-toggle"><h3 style="font-size: 3em;">&#9776;</h3></div>
+                <ul class="menu">
+                    <li><h3><a href="#">Home</a></h3></li>
+                    <li><h3><a href="#about-me" target="_self">About Me</a></h3></li>
+                    <li><h3><a href="#skills" target="_self">Skills</a></h3></li>
+                    <li><h3><a href="#projects" target="_self">Projects</a></h3></li>
+                </ul>
+        </header>
+
+        <div class="border" id="about-me"></div>
+        
+
+        
+        <section class="intro">
+            <h2 class="heading"><span class="tag">&lt;</span> Code Crafted Rhymes: Zanele's Poetic Lines <span class="tag">/&gt;</span></h2>
+            <div class="tabs">
+                <div class="tab-button" >
+                    <div class="tab-button-text">$Terminal.
+                        <div class="tap-text" style="color: #bbb2cf; font-size: small;">(Tap to speed up typing.)</div>
+                    <div class="window-symbols" >
+                        <i class="fa-solid fa-window-minimize"></i>
+                        <i class="fa-solid fa-window-maximize"></i>
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+                </div>  
+            </div>
+            <p class="intro-text2" style="color:rgb(35, 234, 8);" >Zaza:~/Documents/About Me/$<span class="cursor" id="typing-cursor">|</span><p class="intro-text" onclick="typeWriter('typing-cursor','intro-text', 'In the world of sales, I began my career,\nBut my passion for IT was always near.\n\nTransitioning to tech, I found my delight,\nGaining expertise and knowledge, shining bright.\n\nAs a mentor, I guided the tech-savvy youth,\nEmpowering them to learn, grow, and sleuth.\n\nWith empathy and patience, I lend an ear,\nFostering a positive tech atmosphere, crystal clear.\n\nAs a freelance web developer, I broke free,\nCreating websites for all to see.\n\nCoding and configuring with skill and grace,\nBuilding online spaces, a valuable embrace.\n\nMy journey in IT is diverse and grand,\nFrom consultancy to accounts, I take my stand.\n\nWith Java and Python, I weave my code,\nSolving problems with skills that I hold.\n\nInnov8 Makerthon sparked a brilliant creation,\nA device to detect cable disruption, a sensation.\n\nEarning recognition for our innovative spree,\nRunner-up at the Makerthon, a proud victory for me.\n\nWith a blend of sales, finance, and IT in my hand,\nI march forward with passion across the land.\n\nExcited for the opportunities that come my way,\nIn the world of IT, I thrive and stay.')">
+                <button class="terminal-enable" >A Poem About Zanele, by Zanele AI </button>
+               
+            </p>
+         
+        </p>
+        
+        <div id="skills"></div>
+    </div>
+        </section>
+        <br >
+        <section class="skills">
+            <h2 class="heading" id="skills"><span class="tag">&lt;</span> Skillset Spotlight <span class="tag">/&gt;</span>;</h2>
+            <div class="tabs">
+                <div class="tab-button" ><div class="tab-button-text">$Terminal.
+                    <div class="tap-text" style="color: #bbb2cf; font-size: small;">(Tap to speed up typing.)</div>
+                    <div class="window-symbols">
+                        <i class="fa-solid fa-window-minimize"></i>
+                        <i class="fa-solid fa-window-maximize"></i>
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+                </div>  
+            </div>
+            <p class="skils-text2" style="color:rgb(35, 234, 8);" >Zaza:~/Documents/Skills/$<span class="cursor" id="typing-cursor2">|</span> <p class="skils-text" 
+                onclick="typeWriter('typing-cursor2','skils-text','Some of my top skills at the moment include:\n- Technical Expertise \n- Empathy and Patience \n- Problem Solving'+
+                ' \n- Communication and Interpersonal Skills \n- Object-Oriented Programming (OOP)'+
+                ' \n- Server side programing\n- System Intergration and APIs\n- WordPress'+
+                '\n\nMy Tech Stack Expertise:\n<i class=\'fa-brands fa-java\' style=\'color:#bbb2cf; font-size: 230%; padding-bottom: 2vh;\'></i> - Java'+
+                '\n<i class=\'fa-brands fa-python\' style=\'color:#bbb2cf; font-size: 250%; padding-bottom: 2vh;\'></i> - Python'+
+                '\n<i class=\'fa-brands fa-js\' style=\'color:#bbb2cf; font-size: 250%; padding-bottom: 2vh;\'></i> - JavaScript'+
+                '\n<i class=\'fa-solid fa-file-code\' style=\'color:#bbb2cf; font-size: 250%; padding-bottom: 2vh;\'></i> - HTML'+
+                '\n<i class=\'fa-brands fa-css3\' style=\'color:#bbb2cf; font-size: 250%; padding-bottom: 2vh;\'></i> - CSS'+
+                '\n<i class=\'fa-brands fa-maxcdn\' style=\'color:#bbb2cf; font-size: 250%; padding-bottom: 2vh;\'></i> - Maven'+
+                '\n<i class=\'fa-brands fa-git-alt\' style=\'color:#bbb2cf; font-size: 250%;\'></i> - Git')"><button class="terminal-enable">Check my skills</button></p></p>
+        </div>
+        <div id="projects"></div>
+        </section>
+        <br >
+        <section class="projects">
+            <h2 class="heading"><span class="tag">&lt;</span> Project Portfolio <span class="tag">/&gt;</span></h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card__inner">
+                        <div class="card__face card__face--front">
+                            <h2>Sort Master</h2>
+                        </div>
+                        <div class="card__face card__face--back">
+                            <div class="card__content">
+                                <div class="card__header">
+                                    <h2>SORT MASTER</h2>
+                                </div>
+                                <div class="card__body">
+                                    <p>A simple file sorting application for Linux (Debian Systems).Allows users to organize files by specifying a target directory, a destination folder, and a pattern string. Files in the target directory that match the specified pattern are moved to the destination folder</p>
+                                </div>
+                                <div class="card__footer">
+                                        <a href="https://github.com/Keith-Hughes/SortMaster" target="_blank">
+                                            <i class="fab fa-github" style="color:#273747">
+                                        </i></a>
+                                        <a href="https://stocktally.co.za/sortmaster/" target="_blank">
+                                            <i class="fa-solid fa-globe" style="color: #273747;"></i>
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card2">
+                    <div class="card__inner">
+                        <div class="card__face card__face--front">
+                            <h2>Zanele AI</h2>
+                        </div>
+                        <div class="card__face card__face--back">
+                            <div class="card__content">
+                                <div class="card__header">
+                                    <h2>Zanele AI</h2>
+                                </div>
+                                <div class="card__body">
+                                    <p>A Backend API to a custom AI assistant developed using OpenAi API. This AI assistant has been trained/prompted to be a digital representation of myself, allowing users to ask the assistant questions about myself. Click the play button to see it in action</p>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="https://github.com/Keith-Hughes/KeithAi_api" target="_blank">
+                                            <i class="fab fa-github" style="color:#273747">
+                                            </i>
+                                    </a>
+                                    <div class="link" target="_blank">
+                                        <i class="fa-regular fa-circle-play" style="color: #273747;"></i>
+                                    </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card3">
+                    <div class="card__inner">
+                        <div class="card__face card__face--front">
+                            <h2>Loadshedding Web App</h2>
+                        </div>
+                        <div class="card__face card__face--back">
+                            <div class="card__content">
+                                <div class="card__header">
+                                    <h2>Loadshedding web app</h2>
+                                </div>
+                                <div class="card__body">
+                                    <p>A team project developed for a Hackathon. Boguard is a system developed to help manufacturers protect their products from counterfeiting. The system generates unique QR codes containing product details and a hash code, which users can scan to verify the authenticity of the product.</p>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="Zanele Mahlangu- Software Engineer.pdf" target="_blank">
+                                            <i class="fab fa-github" style="color:#273747">
+                                            </i>
+                                    </a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <br>
+        <section class="awards">
+            <h2 class="heading"><span class="tag">&lt;</span>My First Tech Award<span class="tag">/&gt;</span></h2>
+            <div id="content"><h4 style="text-align: center; margin: 0px 10px;">I secured 3rd place in the GirlCode and Chenosis Building Apps Hackathon as a solo participant! 🥉 It's an incredible honor, and I couldn't be more proud of this individual achievement.
+
+                My app, 'Paperless Pouch,' is all about revolutionizing receipt management, making it eco-friendly and organized. This journey has been a testament to dedication and innovation, and I'm grateful for the opportunity to showcase it.</h4>
+            </div>
+            <br>
+            <div id="image-gallery">
+                <div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="/media/hackerthon2.jpeg" alt="hackerthon awards">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="/media/hackerthon1.jpeg" alt="hackerthon awards">
+                </div>
+                <div>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+            </div>
+            <br>
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+                    </section>
+<br>
+        <section class="contact-form">
+            <h2 class="heading"><span class="tag">&lt;</span> Get In Touch <span class="tag">/&gt;</span></h2>
+            <h3 class="successfully submited"></h3>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="message">Your Message:</label>
+                <input type="text" id="message" name="message" required>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>This website was created and designed by me, Zanele.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
+  
